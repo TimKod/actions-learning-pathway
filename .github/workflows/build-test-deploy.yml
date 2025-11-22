@@ -11,6 +11,7 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm install
+      - run: echo '{"extends":"next/core-web-vitals"}' > .eslintrc.json
       - run: npm run build 
   test: 
     needs: build
